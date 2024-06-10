@@ -3,7 +3,7 @@ import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import { defineConfig, PageData } from 'vitepress'
 
-import { head, nav, sidebar, algolia } from './configs'
+import { head, nav, sidebar, localSearchOptions } from './configs'
 
 const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
@@ -11,9 +11,9 @@ export default defineConfig({
   outDir: '../dist',
   base: process.env.APP_BASE_PATH || '/',
 
-  lang: 'zh-CN',
-  title: '茂茂物语',
-  description: '茂茂的成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等',
+  lang: 'en-US',
+  title: 'Whispers of the Wind',
+  description: 'I learn, I think, I believe.',
   head,
 
   lastUpdated: true,
@@ -21,41 +21,44 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
 
   /* 主题配置 */
   themeConfig: {
     i18nRouting: false,
 
-    logo: '/logo.png',
+    logo: '/logo.jpeg',
 
     nav,
     sidebar,
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',
-      label: '本页目录'
+      label: '本页目录',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/ziyixi' }],
 
     footer: {
-      message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present maomao'
+      copyright:
+        'Copyright © 2023-present Zayne Xi, template credits to https://github.com/maomao1996',
     },
 
-    darkModeSwitchLabel: '外观',
-    returnToTopLabel: '返回顶部',
-    lastUpdatedText: '上次更新',
+    darkModeSwitchLabel: 'Switch dark mode',
+    returnToTopLabel: 'Back to top',
+    lastUpdatedText: 'Last Updated',
 
     /* Algolia DocSearch 配置 */
-    algolia,
+    search: {
+      provider: 'local',
+      options: localSearchOptions,
+    },
 
     docFooter: {
-      prev: '上一篇',
-      next: '下一篇'
-    }
+      prev: 'last article',
+      next: 'next article',
+    },
   },
 
   /* 生成站点地图 */
@@ -63,15 +66,15 @@ export default defineConfig({
     if (!/[\\/]404\.html$/.test(id))
       links.push({
         url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData.lastUpdated
+        lastmod: pageData.lastUpdated,
       })
   },
   buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' })
+    const sitemap = new SitemapStream({ hostname: 'https://ziyixi.science/' })
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
     sitemap.pipe(writeStream)
     links.forEach((link) => sitemap.write(link))
     sitemap.end()
     await new Promise((r) => writeStream.on('finish', r))
-  }
+  },
 })

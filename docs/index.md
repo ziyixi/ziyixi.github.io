@@ -3,51 +3,50 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: 茂茂物语
-  text: Mao Mao 的成长之路
-  tagline: 知识是进步的阶梯，争取每天都有知识点更新
+  name: 风语小屋
+  text: 唯有时间证明一切
+  # tagline: 知识是进步的阶梯，争取每天都有知识点更新
+  tagline:
   image:
-    src: /logo.png
-    alt: 茂茂物语
+    src: /logo.jpeg
+    alt: 风语小屋
   actions:
-    - text: 前端物语
-      link: /fe/es6/
-    - text: 前端导航
+    - text: 机器学习101
+      link: /ml/pytorch
+    - text: 常用导航
       link: /nav
-      theme: alt
-    - text: mmPlayer
-      link: https://netease-music.fe-mm.com
       theme: alt
 features:
   - icon: 📖
-    title: 前端物语
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: /fe/javascript/types
-    linkText: 前端常用知识
+    title: 机器学习101
+    details: 机器学习from bottom to top<small>（源代码实现）</small><br />我一定能造出更好的轮子～
+    link: /ml/pytorch
+    linkText: 机器学习101
   - icon: 📘
     title: 源码阅读
-    details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: /analysis/utils/only-allow
+    details: 了解各种库的实现原理<br />读代码是最好的学习手段之一～
+    link: /raw-code/pytorch
     linkText: 源码阅读
   - icon: 💡
     title: Workflow
-    details: 在工作中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />配合 CV 大法来更好的摸鱼
+    details: 记录遇到一些问题的SOP<small>（Standard Operation Procedure）</small><br />费脑的事情做一次就好了～
     link: /workflow/utils/library
     linkText: 常用工具库
   - icon: 🧰
     title: 提效工具
-    details: 工欲善其事，必先利其器<br />记录开发和日常使用中所用到的软件、插件、扩展等
-    link: /efficiency/online-tools
+    details: 记录一些比较好用的工具<br />人和动物的区别是人会使用工具～
+    link: /software/vscode
     linkText: 提效工具
   - icon: 🐞
     title: 踩坑记录
-    details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题
-    link: /pit/npm
+    details: 那些年我们踩过的坑<br />天灵灵，地灵灵，不踩坑不灵～
+    link: /debug/cpp
     linkText: 踩坑记录
   - icon: 💯
-    title: 吾志所向，一往无前。
-    details: '<small class="bottom-small">一个想躺平的小开发</small>'
-    link: /mao
+    title: LeetCode
+    details: 记录刷LeetCode的一些心得体会<br />既然不得不刷，那就刷的开心一点～ <small>虽然我只想躺平</small>
+    link: /leetcode
+    linkText: 刷题记录
 ---
 
 <style>
@@ -61,9 +60,4 @@ features:
   opacity: 0.8;
 }
 
-.m-home-layout .item:last-child .details {
-  display: flex;
-  justify-content: flex-end;
-  align-items: end;
-}
 </style>

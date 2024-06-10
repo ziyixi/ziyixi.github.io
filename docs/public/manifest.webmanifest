@@ -1,7 +1,7 @@
 {
-  "name": "茂茂物语",
-  "short_name": "茂茂物语",
-  "description": "Mao Mao 的成长之路",
+  "name": "风语小屋",
+  "short_name": "风语小屋",
+  "description": "唯有时间证明一切",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",

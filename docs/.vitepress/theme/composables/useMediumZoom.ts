@@ -30,7 +30,7 @@ export const createMediumZoomProvider = (app: App, router: Router) => {
 
   watch(
     () => router.route.path,
-    () => nextTick(() => zoom.refresh())
+    () => nextTick(() => zoom.refresh()),
   )
 }
 
