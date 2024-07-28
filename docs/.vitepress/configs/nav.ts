@@ -14,7 +14,15 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/ml',
   },
-  { text: '源码阅读', link: '/raw-code/pytorch', activeMatch: '^/raw-code' },
+  {
+    text: '源码阅读',
+    items: [
+      { text: 'PyTorch', link: '/raw-code/pytorch' },
+      { text: 'Jax', link: '/raw-code/jax' },
+      { text: 'Eigen', link: '/raw-code/eigen' },
+    ],
+    activeMatch: '^/raw-code',
+  },
   {
     text: 'Workflow',
     items: [
@@ -37,6 +45,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: '日常笔记', link: '/daily-note' },
       { text: '刷题记录', link: '/leetcode' },
+      { text: 'CSAPP', link: '/book/csapp' },
       {
         text: '踩坑记录',
         items: [
@@ -45,16 +54,6 @@ export const nav: DefaultTheme.Config['nav'] = [
         ],
       },
     ],
-  },
-  {
-    text: '提效工具',
-    items: [
-      {
-        text: '软件推荐与配置',
-        items: [{ text: 'Visual Studio Code 配置', link: '/efficiency/software/vscode' }],
-      },
-    ],
-    activeMatch: '^/efficiency',
   },
   {
     text: 'Zayne',

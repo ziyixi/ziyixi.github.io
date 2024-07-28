@@ -12,7 +12,7 @@ export default defineConfig({
   base: process.env.APP_BASE_PATH || '/',
 
   lang: 'en-US',
-  title: 'Whispers of the Wind',
+  title: 'Wind Whisper Miracle House',
   description: 'I learn, I think, I believe.',
   head,
 

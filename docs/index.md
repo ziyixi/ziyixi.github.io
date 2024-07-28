@@ -3,13 +3,13 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: 风语小屋
-  text: 唯有时间证明一切
+  name: 风语奇迹屋
+  text: 我是谁，谁又是我
   # tagline: 知识是进步的阶梯，争取每天都有知识点更新
   tagline:
   image:
     src: /logo.jpeg
-    alt: 风语小屋
+    alt: 风语奇迹屋
   actions:
     - text: 机器学习101
       link: /ml/pytorch
@@ -33,9 +33,9 @@ features:
     link: /workflow/utils/library
     linkText: 常用工具库
   - icon: 🧰
-    title: 提效工具
-    details: 记录一些比较好用的工具<br />人和动物的区别是人会使用工具～
-    link: /software/vscode
+    title: CSAPP
+    details: 记录一些新学到的CSAPP知识<br />越学越菜lol
+    link: /book/csapp
     linkText: 提效工具
   - icon: 🐞
     title: 踩坑记录

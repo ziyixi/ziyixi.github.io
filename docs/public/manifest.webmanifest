@@ -1,7 +1,7 @@
 {
-  "name": "风语小屋",
-  "short_name": "风语小屋",
-  "description": "唯有时间证明一切",
+  "name": "风语奇迹屋",
+  "short_name": "风语奇迹屋",
+  "description": "我是谁，谁又是我",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
