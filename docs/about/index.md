@@ -19,7 +19,7 @@ import { GoogleMap, InfoWindow } from 'vue3-google-map'
 
 const center = { lat: 37.3982205, lng: -121.9859702 }
 const home = { lat: 37.3805556, lng: -121.9760268 }
-const company = { lat: 37.4109031, lng: -122.0283291 }
+const company = { lat: 37.410751805472195, lng: -122.02573972025809 }
 </script>
 
 ```sh:no-line-numbers
