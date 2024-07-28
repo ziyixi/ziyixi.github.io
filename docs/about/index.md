@@ -31,23 +31,20 @@ const company = { lat: 37.4109031, lng: -122.0283291 }
 
 **我？**
 
-- 现居湾区码农一枚
-- 人生约有十年学习某冷门专业（seismology）。自认为对此尚有热情（特指其中的math+physics+cs），可惜对geology颇无兴趣，遂入行CS。
-- 自以为代码写得还可以，有一个CS的本科学位，以及一个CS大类的PhD学位。
-- 梦想去南极待几个月，除却Internet和企鹅，闲人勿扰
-- P社玩家，V3/EU4/CK3/Stellaris/HOI，所以熟知欧洲中世纪至近代历史和家族史（🐶）
-- 喜欢下雨下雪，对湾区阳光明媚的天气深恶痛绝，向往🦐图（🐶+1）
-- INFJ，据说很稀少的人格
++ 现居湾区码农一枚
++ 人生约有十年学习某冷门专业（seismology）。自认为对此尚有热情（特指其中的math+physics+cs），可惜对geology颇无兴趣，遂入行CS。
++ 自以为代码写得还可以，有一个CS的本科学位，以及一个CS大类的PhD学位。
++ 梦想去南极待几个月，除却Internet和企鹅，闲人勿扰
++ P社玩家，V3/EU4/CK3/Stellaris/HOI，所以熟知欧洲中世纪至近代历史和家族史（🐶）
++ 喜欢下雨下雪，对湾区阳光明媚的天气深恶痛绝，向往🦐图（🐶+1）
++ INFJ，据说很稀少的人格
 
 <GoogleMap
-api-key="AIzaSyAHPnE35KiSLVxi8X1IgocG_EyRLb2U7tE"
-style="width: 100%; height: 500px"
-:center="center"
-:zoom="12"
-
->
-
+  api-key="AIzaSyAHPnE35KiSLVxi8X1IgocG_EyRLb2U7tE"
+  style="width: 100%; height: 500px"
+  :center="center"
+  :zoom="12"
+  >
     <InfoWindow :options="{ position: home, content: 'My Home!' }" />
     <InfoWindow :options="{ position: company, content: 'I am working here!' }" />
-
 </GoogleMap>
